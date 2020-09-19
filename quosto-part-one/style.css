@@ -4,124 +4,73 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header {
-    background-color: #f2f2f2;
+h1 { 
+    color: #20a8b4; 
+    margin: 0;
+    display: inline-flex; 
 }
-
-h1 {
-    padding: 10px;
-    margin: 10px;
-    justify-content: flex-start;
-    display: inline-block;
+header { background-color: #f2f2f2; padding: 10px }
+.nav-container {padding-right: 10px;}
+.title2,
+.title5 { color: #ff5c0f; }
+nav { display: block; float: none; }
+ul {
+    margin:0;
+    padding:0 0 5px 0;
+    list-style-type: none;
 }
+ul li { display:block; }
+ul li a { color: black; text-decoration:none }
+ul li a:hover { color: #ff5c0f; }
 
-.title1 {
-    color: #20a8b4;
-}
-
- .title2 {
-     color: #ff5c0f;
- }
-
- ul {
-     flex-direction: column;
-     /*float: right;*/
-     display: flex;
- }
-
- .nav li {
-     display: flex;
-     display: inline-block;
- }
-
- .nav li a {
-     color: black;
-     text-decoration: none;
-     padding: 5px;
- }
-
- ul li a:hover {
-     color: #ff5c0f;
- }
-
- .logo {
-     width: 500px;
-     float: right;
-     padding: 40px;
-     display: none;
- }
-
- .body {
-     position: absolute;
-     top: 50%;
-     font-size: 25px;
-     align-items: flex-start;
-     justify-content: space-around;
-     padding-left: 16px;
- }
-
- h4 {
-     margin-right: 70px;
-     height: 20px;
- }
-
- .title4 {
-     color: #000000;
- } 
-
- .title5 {
-     color: #ff5c0f;
- }
-
- h3 {
-     margin-right: 20px;
-     height: 70px;
-     font-size: 15px;
- }
-
- button {
-     color: #ffffff;
-     background-color: #20a8b4;
-     border-radius: 10px;
-     padding: 12px;
-     width: 100%;
-     top: 50%;
- }
-
- button:hover {
-     background-color: #ff5c0f;
- }
-
- .body {
-    align-items: flex-end;
- }
-
+body header { padding: 10px; }
+.nav-container{display: block;}
 button {
-    width: auto;
+    color: #ffffff;
+    background-color: #20a8b4;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    top: 50%;
+}
+button:hover {
+    background-color: #ff5c0f;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    body { flex-direction: row; }
-    /* .nav-container{padding-left: 16px;}; */
-    .nav-buttons{padding-left: 16px;}
-    ul{padding-left: 0 !important;}
-    .logo{display: none !important;}
+.row {
+    margin-top: 50px;
+    display: block;
 }
-  
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    body { flex-direction: row; }
-    .nav-buttons{padding-left: 16px;}
-    /* ul{padding-left: 0 !important;} */
-    .logo{display: none !important;}
-} 
+.row div:first-child {
+    margin-top: 0;
+}
+.column {
+    flex: 100%;
+    padding: 0 20px 0 10px;
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .nav {
-        justify-content: space-between;
-        display: inline-block;
+img { 
+    display: none;
+    width: 500px;
+    float: right;
+}
+
+@media only screen and (min-width: 768px) {
+    body { flex-direction: row;}
+    nav { display: block; float: right !important; }
+    ul {
+        padding-right: 10px;
+        padding-top: 10px;
     }
-    .logo{display: flex;}
-} 
+    ul li { display:inline; }
+    button { width: auto; }
+    img { display: block }
+    .row {
+        width: 100%;
+        display: flex;
+    }
+    .row div:first-child {
+        margin-top: 100px;
+    }
+    .nav-container{display: flex;}
+}
